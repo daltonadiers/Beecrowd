@@ -10,14 +10,6 @@ struct capoio{
     capoio(int peso_, int dano_) : peso(peso_), dano(dano_){}
 };
 
-bool ordena(const capoio& capoio1, const capoio& capoio2){
-    if(capoio1.peso==capoio2.peso){
-        return capoio1.dano < capoio2.dano;
-    }else{
-        return capoio1.peso < capoio2.peso;
-    }
-}
-
 void printer(vector<vector<int>> &matrizAns, int a, int t){
     for(int i=0; i<a; i++){
             for(int j=0; j<t;j++){
@@ -34,7 +26,6 @@ int main(){
     cout.tie(NULL);
     while(cin >> n >> t && n && t){
         cason++;
-        //balas de canhao
         int d,p;
         vector<capoio> atracoes;
         for(int i=0; i<n;i++){
@@ -43,7 +34,6 @@ int main(){
             atracoes.push_back(c);
             for(int j=0; j<t/d;j++)atracoes.push_back(c);
         }
-        //sort(atracoes.begin(), atracoes.end(), ordena);
         
        vector<vector<int>> matrizAns(atracoes.size() + 1, vector<int>(t + 1, 0));
        for(int i=0; i<(int)atracoes.size()+1; i++){
