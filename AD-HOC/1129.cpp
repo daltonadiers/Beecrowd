@@ -3,6 +3,7 @@
     Problem: https://www.beecrowd.com.br/judge/pt/problems/view/1129
 */
 
+
 #include <iostream>
 #include <vector>
 
